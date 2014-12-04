@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Oswald:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
+  <script src="js/gyro.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="intro">
+    <svg id="c-intro">
+    <!--
+      <path id="triangle" fill="#00eec1" stroke="#000000" transform="translate(-100) scale(0.5)" stroke-miterlimit="10" d="M0,0v149.286C11.568,91.074,81.345,12.206,149.286,0H0z"/>
+    -->
+    <!--
+  <defs>
+    <clipPath id="cut-off-bottom">
+        <circle id="cover-circ" cx="50%" cy="50%" r="150" fill="#121414" stroke-width="200px" />
+    </clipPath>
+  </defs>-->
+
+      <rect id="arrow" x="-130" y="-130" width="130" height="130" fill="#121414"  clip-path="url(#cut-off-bottom)" />
+
+      <circle id="cover-circ" cx="50%" cy="50%" r="150" fill="#121414" stroke-width="200px" />
+
+      <circle id="circ" cx="50%" cy="50%" r="110%" fill-opacity="0" stroke="rgba(255, 255, 255, 1)" stroke-width="200px" />
+
+    </svg>
+  </div>
+  <div class="spacer"></div>
+  <div class="content">
+    <h1><img src="css/logo-font-outline.png" width="50%" /></h1>
+    <h2>Connecting Skiers</h2>
+    <p>Next level proximity device that allows you to see where your friends are on a mountain without needing a celluar/wifi/data connection. Connect your band to up to 7 other users and never lose them again! </p>
+    <div class="connect icon"></div>
+    <h3>Always Connected</h3>
+    <p>Origin will tell you where your friends are. Something something. Something. Spectacular, incredible, technology. You'll always know which direction your friend is in, <em>no matter which way you're facing</em></p>
+ 
+ <svg id="c-ui">
+  <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
+  <rect id="north-rect" x="0" y="0" width="56" height="56" fill="#e20000"/>
+
+  <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
+  <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
+  <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
+
+  <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
+  <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
+
+ </svg>
+
+    <div class="ping icon"></div>
+    <h3>PING TO SAY X</h3>
+    <p>Need a gentle way to nudge your friends to look at your location? Ping. Now they know you want their attention. Yeah, you like that don't you.</p>
+
+     <svg id="c-ping">
+  <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
+
+  <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
+  <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
+  <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
+
+
+  <circle id="ring1" cx="100" cy="100" r="10" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
+  <circle id="ring2" cx="100" cy="100" r="30" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
+
+  <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
+  <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
+
+ </svg>
+
+
+    <div class="emergency icon"></div>
+    <h3>GET HELP</h3>
+    <p>Did you just break your leg? Fall off a cliff? Both? It's an emergency! Hold the emergency button to get emergency help.</p>
+  </div>
+</body>
+</html>
