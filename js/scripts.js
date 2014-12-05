@@ -127,7 +127,7 @@ $('.spacer').click(function(){
   $("#arrow")
     .velocity({ 
                 fill: colorWheel[colorWheelCount%colorWheel.length]
-              }, {duration: 300})
+              }, {duration: 200})
 
 });
 
