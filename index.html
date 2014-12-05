@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
 
   <script src="js/gyro.js"></script>
@@ -36,54 +36,97 @@
 
       <circle id="circ" cx="50%" cy="50%" r="110%" fill-opacity="0" stroke="rgba(255, 255, 255, 1)" stroke-width="200px" />
 
+      <image id="swipe" xlink:href="css/buttondown.png" x="0" y="0"/>
     </svg>
   </div>
   <div class="spacer"></div>
-  <div class="content">
-    <h1><img src="css/logo-font-outline.png" width="50%" /></h1>
-    <h2>Connecting Skiers</h2>
-    <p>Next level proximity device that allows you to see where your friends are on a mountain without needing a celluar/wifi/data connection. Connect your band to up to 7 other users and never lose them again! </p>
-    <div class="connect icon"></div>
-    <h3>Always Connected</h3>
-    <p>Origin will tell you where your friends are. Something something. Something. Spectacular, incredible, technology. You'll always know which direction your friend is in, <em>no matter which way you're facing</em></p>
- 
- <svg id="c-ui">
-  <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
-  <rect id="north-rect" x="0" y="0" width="56" height="56" fill="#e20000"/>
+    <div class="content">
+    <div class="m-wrapper">
+      <h1><img src="css/logo-font-outline.png" width="50%" /></h1>
+      <h2>Connecting Skiers</h2>
+      <img class="cad-placeholder" src="css/cad-placeholder.png" />
+      <p>Next level proximity device that allows you to see where your cats are, so you can say hi to them. hello!</p>
+      <div class="connect icon"></div>
+      <h3>Always Connected</h3>
+      <p>Origin will tell you where your friends are. Something something. Something. Spectacular, incredible, technology. You'll always know which direction your friend is in, <em>no matter which way you're facing</em>. Below is the UI! Try rotating your phone!</p>
+   
+   <svg id="c-ui">
+    <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
+    <rect id="north-rect" x="0" y="0" width="56" height="56" fill="#e20000"/>
 
-  <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
-  <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
-  <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
+    <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
+    <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
+    <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
 
-  <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
-  <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
-
- </svg>
-
-    <div class="ping icon"></div>
-    <h3>PING TO SAY X</h3>
-    <p>Need a gentle way to nudge your friends to look at your location? Ping. Now they know you want their attention. Yeah, you like that don't you.</p>
-
-     <svg id="c-ping">
-  <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
-
-  <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
-  <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
-  <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
+    <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
+    <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
 
 
-  <circle id="ring1" cx="100" cy="100" r="10" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
-  <circle id="ring2" cx="100" cy="100" r="30" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
+   </svg>
 
-  <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
-  <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
+      <div class="ping icon"></div>
+      <h3>PING TO SAY X</h3>
+      <p>Need a gentle way to nudge your friends to look at your location? Ping. Now they know you want their attention. Yeah, you like that don't you.</p>
 
- </svg>
+       <svg id="c-ping">
+    <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
+
+    <circle cx="150" cy="90" r="70" fill="#121414" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" />
+    <circle cx="150" cy="90" r="40" fill-opacity="0" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1" /> 
+    <circle cx="150" cy="90" r="4" fill="rgba(255, 255, 255, 0.7)" /> 
 
 
-    <div class="emergency icon"></div>
-    <h3>GET HELP</h3>
-    <p>Did you just break your leg? Fall off a cliff? Both? It's an emergency! Hold the emergency button to get emergency help.</p>
+    <circle id="ring1" cx="100" cy="100" r="10" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
+    <circle id="ring2" cx="100" cy="100" r="30" fill-opacity="0" stroke="#ff8400" stroke-width="2" /> 
+
+    <circle id="dw" cx="100" cy="100" r="23" fill="#ff8400" />
+    <text id="dw-text" x="86" y="110" fill="#ffffff">DW</text>
+
+   </svg>
+
+
+      <div class="emergency icon"></div>
+      <h3>GET HELP</h3>
+      <p>Did you just break your leg? Fall off a cliff? Both? It's an emergency! Hold the emergency button to get emergency help.</p>
+      <img class="emer-img" src="css/emer-placeholder.png" />
+    </div>
+  </div>
+  <div class="content dark">
+    <h4>TECH SPECS</h4>
+    <table>
+      <tr>
+        <td width="60%">Battery Life</td>
+        <td width="40%">8hrs</td>
+      </tr>
+      <tr>
+        <td>Location Data Accuracy</td>
+        <td>15ft</td>
+      </tr>
+      <tr>
+        <td>Screen Size</td>
+        <td>2.4"</td>
+      </tr>
+      <tr>
+        <td>Dimensions of Body</td>
+        <td>2.6" x 2.9" x 0.6"</td>
+      </tr>
+      <tr>
+        <td>Strap Length</td>
+        <td>11"</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>0.7lbs</td>
+      </tr>
+      <tr>
+        <td>Waterproofing</td>
+        <td>IP67</td>
+      </tr>
+      <tr>
+        <td>Radio Frequency Band</td>
+        <td>900MHz</td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>

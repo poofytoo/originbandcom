@@ -2,6 +2,18 @@ $(function() {
 var W = $(window).width();
 var H = $(window).height();
 
+$(window).scroll(function () {
+  /*
+  console.log($(window).scrollTop())
+      $('#swipe')
+        .velocity({ opacity: 0,
+                y: H
+              }, {duration: 700});
+*/
+    
+
+});
+
 $("#cover-circ")
     .velocity({ cx: W/2,
                 cy: H/2,
@@ -11,12 +23,25 @@ $("#circ")
     .velocity({ cx: W/2,
                 cy: H/2,
               }, {duration: 100})
-    .delay(100)
     .velocity({ r: 100, 
                 strokeWidth: "30px",
                 opacity: 1 }, 
               { duration: 700, easing: [.53,.01,.91,.69]}
               );
+
+mW = Math.min(W, 400);
+mH = H;
+
+$("#swipe")
+    .velocity({ x: W/2 - mW/4,
+                y: mH,
+                width: mW/2,
+                height: (mW/2  / 400 * 73),
+              }, {duration: 0})
+    .delay(1800)
+    .velocity({y: mH - (mW/2  / 400 * 73),
+              }, {duration: 500, easing: 'ease-out'})
+
 $("#arrow")
     //.delay(500)
     .velocity({ 

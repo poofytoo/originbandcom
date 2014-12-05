@@ -6,6 +6,16 @@ body {
   font-family: 'Lato', sans-serif;
   line-height: normal; }
 
+.m-wrapper {
+  max-width: 400px;
+  margin: 0 auto; }
+
+.cad-placeholder {
+  width: 330px;
+  display: block;
+  width: 100%;
+  margin: 26px auto; }
+
 svg#c-intro {
   display: block;
   width: 100%;
@@ -29,6 +39,10 @@ svg#c-ping {
   font-size: 24px;
   font-weight: 300; }
 
+.emer-img {
+  display: block;
+  margin: 30px auto; }
+
 em {
   font-weight: 600; }
 
@@ -45,6 +59,10 @@ em {
 .content {
   background: #fff;
   padding: 20px; }
+  .content.dark {
+    background: #e7eceb;
+    color: #111;
+    border-top: #333; }
 
 .spacer {
   width: 100%;
@@ -71,6 +89,22 @@ h3 {
   font-weight: 600;
   margin-bottom: 20px;
   color: #999; }
+
+h4 {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 600; }
+
+table {
+  width: 100%; }
+
+tr {
+  border-top: 1px #444 solid; }
+
+td {
+  padding: 7px 0; }
 
 .icon {
   width: 40px;
