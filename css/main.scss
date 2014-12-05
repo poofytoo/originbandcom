@@ -30,17 +30,20 @@ svg#c-intro {
 
 svg#c-ui {
   display: block;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 180px;
   margin: 30px auto 0;
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
   font-weight: 300;
+
 }
 
 svg#c-ping {
   display: block;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 180px;
   margin: 30px auto 0;
   font-family: 'Oswald', sans-serif;
@@ -51,6 +54,8 @@ svg#c-ping {
 .emer-img {
   display: block;
   margin: 30px auto;
+  max-width: 300px;
+  width: 100%;
 }
 
 em {
@@ -113,10 +118,14 @@ h3 {
 
 h4 {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   text-transform: uppercase;
   margin: 0 0 20px;
   font-weight: 600;
+
+  &.features {
+    margin: 20px 0 15px;
+  }
 }
 
 p {
@@ -125,7 +134,16 @@ p {
 
 table {
   width: 100%;
+  font-size: 4vw;
 }
+
+@media (min-width: 600px) {
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
 tr {
   border-top: 1px #444 solid;
 }
@@ -143,6 +161,7 @@ td {
 
 .connect {
   background-position: 0px 0px;
+  margin-top: 0px;
 }
 
 .ping {

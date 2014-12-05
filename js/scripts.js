@@ -3,13 +3,13 @@ var W = $(window).width();
 var H = $(window).height();
 
 $(window).scroll(function () {
-  /*
-  console.log($(window).scrollTop())
-      $('#swipe')
-        .velocity({ opacity: 0,
-                y: H
-              }, {duration: 700});
-*/
+  
+  if ($(window).scrollTop() < 200) {
+      $('#swipe').show()
+    } else {
+      $('#swipe').hide()
+    }
+
     
 
 });
@@ -119,6 +119,18 @@ var v1 = window.setInterval(function() {
     {duration: 0})
 
 }, 1000);
+
+var colorWheel = ['#FF952C', '#E91E63', '#4DE51C', '#1BF8EB']
+var colorWheelCount = 0;
+$('.spacer').click(function(){
+  colorWheelCount ++;
+  $("#arrow")
+    .velocity({ 
+                fill: colorWheel[colorWheelCount%colorWheel.length]
+              }, {duration: 300})
+
+});
+
 window.setTimeout(function() {
     var v2 = window.setInterval(function() {
     $("#ring2").velocity({ 
