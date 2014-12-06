@@ -64,7 +64,11 @@ em {
 .content {
   background: #fff;
   padding: 20px; }
-  .content.dark {
+  .content.gray {
+    background: #e7eceb;
+    color: #111;
+    border-top: #333; }
+  .content.gray {
     background: #e7eceb;
     color: #111;
     border-top: #333; }

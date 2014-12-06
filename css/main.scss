@@ -80,7 +80,13 @@ em {
   background: #fff;
   padding: 20px;
 
-  &.dark {
+  &.gray {
+    background: #e7eceb;
+    color: #111;
+    border-top: #333;
+  }
+  
+  &.gray {
     background: #e7eceb;
     color: #111;
     border-top: #333;
