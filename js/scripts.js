@@ -57,7 +57,7 @@ $("#arrow")
     
     .velocity({ rotateZ: 180,
                 translateZ: 0,
-                fill: '#1bf8eb'
+                fill: '#e91e63'
                 }, 
               { duration: 1200, easing: [.6,.01,.42,1]}
               );
@@ -120,7 +120,7 @@ var v1 = window.setInterval(function() {
 
 }, 1000);
 
-var colorWheel = ['#FF952C', '#E91E63', '#4DE51C', '#1BF8EB']
+var colorWheel = ['#FF952C', '#4DE51C', '#1BF8EB', '#E91E63']
 var colorWheelCount = 0;
 $('.spacer').click(function(){
   colorWheelCount ++;

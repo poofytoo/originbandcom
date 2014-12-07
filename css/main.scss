@@ -16,11 +16,10 @@ body {
   margin: 0 auto;
 }
 
-.cad-placeholder {
-  width: 330px;
+.title-photo {
   display: block;
   width: 100%;
-  margin: 26px auto;
+  margin: 0 auto 0;
 }
 
 svg#c-intro {
@@ -54,7 +53,8 @@ svg#c-ping {
 
 .emer-img {
   display: block;
-  margin: 30px auto;
+  padding: 20px 0 30px;
+  margin: 0 auto;
   max-width: 300px;
   width: 100%;
 }
@@ -78,7 +78,6 @@ em {
 
 .content {
   background: #fff;
-  padding: 20px;
 
   &.gray {
     background: #e7eceb;
@@ -99,27 +98,25 @@ em {
 }
 
 h1 {
+  padding-top: 24px;
   font-size: 30px;
   font-weight: 100;
   text-align: center;
 }
 
 h2 {
+  margin-bottom: 20px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   color: #333;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
 }
 
 h3 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 20px;
   color: #999;
 }
 
@@ -128,6 +125,7 @@ h4 {
   font-size: 30px;
   text-transform: uppercase;
   margin: 0 0 20px;
+  padding-top: 20px;
   font-weight: 600;
 
   &.features {
@@ -143,11 +141,13 @@ h5 {
 }
 
 p {
-
+padding: 20px 20px;
 }
 
 table {
-  width: 100%;
+  width: calc(100% - 40px);
+  width: -webkit-calc(100% - 40px);
+  margin: 20px;
   font-size: 4vw;
 }
 
@@ -187,6 +187,7 @@ td {
 }
 
 .more {
+  padding: 20px;
   a {
     text-decoration: none;
     display: block;

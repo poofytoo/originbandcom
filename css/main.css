@@ -11,11 +11,10 @@ body {
   max-width: 400px;
   margin: 0 auto; }
 
-.cad-placeholder {
-  width: 330px;
+.title-photo {
   display: block;
   width: 100%;
-  margin: 26px auto; }
+  margin: 0 auto 0; }
 
 svg#c-intro {
   display: block;
@@ -44,7 +43,8 @@ svg#c-ping {
 
 .emer-img {
   display: block;
-  margin: 30px auto;
+  padding: 20px 0 30px;
+  margin: 0 auto;
   max-width: 300px;
   width: 100%; }
 
@@ -62,8 +62,7 @@ em {
   background-size: cover; }
 
 .content {
-  background: #fff;
-  padding: 20px; }
+  background: #fff; }
   .content.gray {
     background: #e7eceb;
     color: #111;
@@ -78,25 +77,23 @@ em {
   height: 100%; }
 
 h1 {
+  padding-top: 24px;
   font-size: 30px;
   font-weight: 100;
   text-align: center; }
 
 h2 {
+  margin-bottom: 20px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee; }
+  text-transform: uppercase; }
 
 h3 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 20px;
   color: #999; }
 
 h4 {
@@ -104,6 +101,7 @@ h4 {
   font-size: 30px;
   text-transform: uppercase;
   margin: 0 0 20px;
+  padding-top: 20px;
   font-weight: 600; }
   h4.features {
     margin: 20px 0 15px; }
@@ -114,8 +112,13 @@ h5 {
   text-transform: uppercase;
   margin: 30px 0 20px; }
 
+p {
+  padding: 20px 20px; }
+
 table {
-  width: 100%;
+  width: calc(100% - 40px);
+  width: -webkit-calc(100% - 40px);
+  margin: 20px;
   font-size: 4vw; }
 
 @media (min-width: 600px) {
@@ -145,15 +148,17 @@ td {
 .emergency {
   background-position: -117px 0px; }
 
-.more a {
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 5px; }
+.more {
+  padding: 20px; }
+  .more a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
 
 /*
 .PiYG {
