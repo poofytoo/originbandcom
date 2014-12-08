@@ -240,3 +240,6 @@ td {
     color: #333;
     text-transform: uppercase;
     margin-bottom: 5px; }
+
+.print {
+  display: none; }
