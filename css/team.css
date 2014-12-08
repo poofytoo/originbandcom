@@ -8,6 +8,10 @@ h1 {
   font-size: 25px;
   margin: 20px 0 20px; }
 
+h2 {
+  font-size: 20px;
+  color: #999; }
+
 em {
   font-weight: 800;
   color: #e91e63; }
