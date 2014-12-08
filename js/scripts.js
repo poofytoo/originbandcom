@@ -1,24 +1,69 @@
+/* 
+
+Hello young code explorer!
+
+Welcome to my little JavaScript playground. This website was built with:
+JQuery
+Velocity.JS
+2.5 hours of sleep
+22 hour of frantic typing
+and a whole lot of coffee
+If you see me, please say hi.
+
+- Victor
+
+*/
+
 $(function() {
+
 var W = $(window).width();
 var H = $(window).height();
 
+// Toggle whether or not it says swipe up or butotn up
+if (W > 500) {
+  $('#swipe').attr('xlink:href', 'css/scrollup.png');
+}
+
+// Blink the Emergency Button
+window.setInterval(function() {
+  $('.emer-1').show();
+  window.setTimeout(function() {
+    $('.emer-1').hide();
+  }, 600);
+}, 1200);
+
+// Hide the swipe element after page is scrolled up
 $(window).scroll(function () {
-  
   if ($(window).scrollTop() < 200) {
       $('#swipe').show()
     } else {
       $('#swipe').hide()
     }
-
-    
-
 });
+
+var oFire = new Firebase("https://poofytoo.firebaseio.com/originemails");
+$('.signup').click(function() {
+  signup();
+});
+
+$('.user-email').bind("keypress", function(event) {
+    if(event.which == 13) {
+    event.preventDefault();
+      signup();
+    }
+});
+
+var signup = function() {
+  oFire.push($('.user-email').val());
+  $('.email-added').text('Added ' + $('.user-email').val() + '!');
+  $('.user-email').val('');
+  $('.email-added').slideDown();
+}
 
 $("#cover-circ")
     .velocity({ cx: W/2,
                 cy: H/2,
               }, {duration: 0})
-
 $("#circ")
     .velocity({ cx: W/2,
                 cy: H/2,
@@ -145,11 +190,12 @@ window.setTimeout(function() {
   }, 500)
 gyro.frequency = 100;
   gyro.startTracking(function(o) {
-        // o.x, o.y, o.z for accelerometer
-        // o.alpha, o.beta, o.gamma for gyro
-        /*
-        $('body').css('color', '#fff');
-        */
+      if (o.alpha) {
+        $('.rotate-msg').show();
+      } else { 
+        $('.rotate-msg').hide();
+      }
+      
         angle = (o.alpha - 45)/180 * Math.PI;
         x = Math.cos(angle)*50 + 150
         y = Math.sin(angle)*50 + 90
@@ -169,5 +215,8 @@ gyro.frequency = 100;
           translateY: 90,
           rotateZ: o.alpha-135 }, 
           {duration: 0});
-    });
+
+      
+
+        });
 })

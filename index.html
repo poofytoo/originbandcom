@@ -9,12 +9,14 @@
 
   <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
 
   <script src="js/gyro.js"></script>
+  <script src="js/swipeshow.js"></script>
   <script src="js/scripts.js"></script>
 </head>
 <body>
@@ -51,7 +53,7 @@
         <p>Origin is a wristband that utilizes radio and GPS technology to keep groups of skiers connected on the slopes.</p>
       <div class="connect icon"></div>
       <h3>Always Connected</h3>
-      <p>How does it work? You and your friends sync up your Origins at the beginning of the day.  Then you can then see their relative directions and distances with a quick glance at the screen.  Your friends' locations even update with which way you are facing - try rotating your phone to see what it looks like.</p>
+      <p>How does it work? You and your friends sync up your Origins at the beginning of the day.  Then you can then see their relative directions and distances with a quick glance at the screen.  Your friends' locations even update with which way you are facing<span class="rotate-msg"> - try <em>rotating your phone</em> to see how the direction of your friends change relative to you</span>.</p>
    
    <svg id="c-ui">
     <rect x="0" y="0" width="300" height="180" fill="#121414" /> 
@@ -91,7 +93,12 @@
       <div class="emergency icon"></div>
       <h3>EMERGENCY CALL</h3>
       <p>If you fall and need help, you can send an emergency notification to your friends.  Ski resorts can opt to integrate this with their emergency response program to direct help to your exact location.</p>
-      <img class="emer-img" src="css/emer-placeholder.png" />
+      <div class="emer">
+        <img class="emer-img" src="css/emergencycall.png" />
+        <img class="emer-holder" src="css/emergencycall.png" />
+        <img class="emer-1" src="css/emer-1.png" />
+        <img class="emer-2" src="css/emer-2.png" />
+      </div>
     </div>
   </div>
   <div class="content gray">
@@ -132,12 +139,14 @@
         </tr>
       </table>
       <h5>Under the hood</h5>
-      <img class="emer-img" src="css/origin-board.png" />
+      <div class="origin-board-center">
+      <img class="origin-board" src="css/origin-board.png" />
+      </div>
     </div>
   </div>
   <div class="content more">
     <div class="m-wrapper">
-      <h4>EXTRAS</h4>
+      <h4>EXPLORE</h4>
       <a href="process.html">
         Design Process
       </a>
@@ -147,14 +156,30 @@
       </a>
       -->
       <a href="team.html">
-        Team
+        Team & Contact
       </a>
 
     </div>
   </div>
-  <div class="content dark">
+  <div class="content interest">
+    <div class="m-wrapper">
+      <h4>EXCITED?</h4>
+      <h6>Interested in the future of Origin? Sign up for our mailing list.</h6>
+      <div class="email-added">Added vhung@mit.edu!</div>
+      <div class="email-container">
+      <input class="user-email"type="email" placeholder="Email Address" />
+      <button class="signup">SIGN UP</button>
+      </div>
+    </div>
   </div>
-      <script>
+
+  <div class="print">
+    <div class="printcontainer">
+      <h1>Visit <em>ORIGIN</em>BAND.COM on your mobile device!</h1>
+      <img src="css/qr-code.png" />
+    </div>
+  </div>
+  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
