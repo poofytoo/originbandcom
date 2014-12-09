@@ -103,6 +103,8 @@ em {
       color: #ccc;
       font-weight: 300;
       padding-top: 30px; }
+      .content.gray h4.ts {
+        margin-bottom: 30px; }
     .content.gray h5 {
       color: #999999; }
   .content.interest {
